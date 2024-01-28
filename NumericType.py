@@ -172,3 +172,51 @@ x = 'a'
 # print(int(x))  # Error doesn't print ASCII when type converted
 print(ord(x))   # ord() to find ASCII value of a alphabet
 
+
+
+'''
+
+ **Float Methods:**
+
+  - `is_integer()`: Check if a float is an integer.
+
+  - `as_integer_ratio()`: Return a pair of integers representing the numerator and denominator of the float.
+
+  - `hex()`: Convert a float to a hexadecimal string.
+
+  - `fromhex()`: Convert a hexadecimal string to a float.
+
+
+
+- **Built-in Functions (Float-specific):**
+  - `abs()`: Absolute value of a float.
+  - `round()`: Round a float to the nearest integer.
+  - `divmod()`: Quotient and remainder of the division.
+  - `float()`: Convert an integer or string to a float.
+
+-
+
+ **Arithmetic Operations on Floats:**
+  - Addition: `a + b`
+  - Subtraction: `a - b`
+  - Multiplication: `a * b`
+  - Division: `a / b`
+  - Floor Division: `a // b`
+  - Modulus: `a % b`
+  - Exponentiation: `a ** b`
+
+
+
+- **Type Conversions (To Float):**
+  - `int()`: Convert an integer to a float.
+  - `str()`: Convert a string containing a number to a float.
+  
+  
+
+
+- **Type Conversions (From Float):**
+  - `int()`: Convert a float to an integer (truncating the decimal part).
+  - `str()`: Convert a float to a string.
+  - `bool()`: Convert a float to a boolean (False if the float is 0.0, True otherwise).
+
+'''

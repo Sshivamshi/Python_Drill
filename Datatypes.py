@@ -169,7 +169,7 @@
 - **Type Conversions (To Float):**
   - `int()`: Convert an integer to a float.
   - `str()`: Convert a string containing a number to a float.
-  - `complex()`: Convert a complex number to a float.
+  
   
 
 
