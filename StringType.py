@@ -1,3 +1,79 @@
+# In Python, Strings are arrays of bytes representing Unicode characters.
+z = 'a'  # string of len 1 not a char
+# Python does not have a character data type, a single character is simply a string with a length of 1. Square brackets can be used to access elements of the string.
+a = 'Hello'
+b = " 'Hello' "
+# c = " ''' "Hello" ''' " # invalid syntax 
+c = ''' "Hello" ''' # ''' triple quotes are used to print double quoted string and multiline string
+d = ''' This is a 
+multiline            text.'''
+print(a,b,c)
+print(d)
+''' OUTPUT: 
+Hello  'Hello'   "Hello" 
+ This is a 
+multiline            text. '''  # This is Docstring format , can be used a multiline Python Comments 
+
+s = 'Hello Himmi'
+print(s[-1]) # i    s[-1] returns the last char in string and -2 represents the second last and so on 
+print(s[-2]) # m     if indexing from left to right is  0-12  then in reverse it's (-1)-(-13)
+# While accessing an index out of the range will cause an IndexError. Only Integers are allowed to be passed as an index, float or other types that will cause a TypeError
+
+# Reversing a String : 
+# print(s.reverse())  # AttributeError: 'str' object has no attribute 'reverse'
+print(s[::-1])   # immiH olleH
+
+
+# Code to check if string is palindrome 
+s = ['MOM' ,'DAD','GOD' ]
+for word in s :
+    if word == word[::-1]:   # If  String == Reversed string 
+        print('Palindrome')
+    else:
+        print('Not Palindrome')
+''' OUTPUT: 
+Palindrome
+Palindrome
+Not Palindrome
+'''
+
+string = "Geeks for Geeks"
+print(reversed(string))   # <reversed object at 0x7f4b1ea148b0>   # The reversed() function in Python returns a reversed iterator, not a reversed string. The reversed iterator can be used in a loop or converted to other iterable types, but it is not automatically converted to a string.
+
+print(str(reversed(string))) # <reversed object at 0x7f4b1ea148b0>  :    # The reversed() function in Python returns a reversed iterator, not a reversed string. The reversed iterator can be used in a loop or converted to other iterable types, but it is not automatically converted to a string.
+
+reversedString = list(reversed(string))    # Reversed object (iterable) coverted to list , similar to map objects are coverted to list using list() 
+
+s = ''.join(reversed(string))
+print(s)   
+print(reversedString)  #  ['s', 'k', 'e', 'e', 'G', ' ', 'r', 'o', 'f', ' ', 's', 'k', 'e', 'e', 'G']
+
+string = "hello"
+listOfReversed = []
+
+listOfReversed.extend(map(str.upper, reversed(string)))
+print(listOfReversed)   # ['O', 'L', 'L', 'E', 'H']
+
+
+listOfReversed2 = list(map(input, reversed(string)))  
+ # OUTPUT : s  :  input() function might not behave as expected input() requires user interaction and is designed to be used interactively in the console, which might not align well with the expectations of map().    output.extend(map(square, numbers))square() is a regular function that takes a value and returns its square. It works seamlessly with map() because it's designed to work as a regular function, not expecting user interaction.
+print(listOfReversed2)
+
+s = "hello"
+s_reversed = reversed(s)  # but note that reversed() return a reversed type object which is an iterable 
+print(s_reversed)    # OUTPUT : <reversed object at 0x7ffba299f8b0>
+s_reversed2 = s[::-1]  # Reversed
+print(s_reversed2)     # OUTPUT: olleh 
+# converting the reversed type object to list type object , using list() as it creates a new list object and puts values into it . Similar to converting  
+print(list(reversed(s))) #  ['o', 'l', 'l', 'e', 'h'] 
+rever = ''.join(reversed(s))
+print(rever)      # OUTPUT: olleh 
+
+string = "hello"
+listOfReversed = []
+listOfReversed.extend(map(str.upper, reversed(string)))
+print(listOfReversed)   # ['O', 'L', 'L', 'E', 'H']
+
 '''
 String Methods:
 
@@ -13,7 +89,7 @@ String Methods:
 - `title()`
   - Returns a titlecased version of the string where words start with an uppercase character.
 
-- `count(sub[, start[, end]])`
+-  string.count(Substr, start, end)
   - Returns the number of occurrences of a substring in the string.
 
 - `find(sub[, start[, end]])`
@@ -46,9 +122,12 @@ print(s.lower())     # Output: hello
 print(s.upper())     # Output: HELLO
 print(s)             # Output: hello (original string s)
 
-
-
-
+s = 'he is a good boy,he is a emperor , he walks his path '
+print(s.count('he'))   # 3
+print(s.count('he', 17 ,20 ))    # 1 
+print(s.count('he', 17 ))    # 2
+# string.count(value, start, end)  
+#  start:  An Integer. The position to start the search. Default is 0   End : An Integer. The position to end the search. Default is the end of the string
 
 
 
@@ -71,11 +150,30 @@ print(s)             # Output: hello (original string s)
 - `chr(i)`
   - Returns a string representing a character whose Unicode code point is the integer.
 
+
+'''
+
+
+
+
+'''
+
 ### Operations on Strings:
 
 - Concatenation: `s1 + s2`
 
 - Repetition: `s * n` (repeats the string s n times)
+
+'''
+
+
+
+
+
+
+
+'''
+
 
 ### Type Conversions (From String):
 
@@ -87,6 +185,10 @@ print(s)             # Output: hello (original string s)
 
 - `bool(s)`
   - Converts a string to a Boolean value.
+
+'''
+
+'''
 
 ### Type Conversions (To String):
 
